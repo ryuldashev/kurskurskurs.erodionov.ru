@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { random as generateEmojis } from 'random-unicode-emoji';
 
 import { H2, H3 } from './ui/Heading';
-import Paragraph from './ui/Paragraph';
+import Block from './ui/Block';
 
 const Results = styled.div`
   margin-bottom: 2rem;
@@ -67,7 +67,7 @@ const results = [
 const emojis = generateEmojis({ count: results.length });
 
 export default () => (
-  <Paragraph>
+  <Block>
     <H2>Результаты</H2>
     <p className="paragraph-text">
       После курса у ребят появляется настоящее портфолио с проектом, основаным на реальных
@@ -89,5 +89,5 @@ export default () => (
       Отзывы: <Break />
       <Link href="https://vk.com/wall52708366_1930">vk.com/wall52708366_1930</Link>
     </p>
-  </Paragraph>
+  </Block>
 );

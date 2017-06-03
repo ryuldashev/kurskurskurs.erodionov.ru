@@ -2,7 +2,7 @@ import React from 'react';
 import qs from 'qs';
 
 import { H2 } from './ui/Heading';
-import Paragraph from './ui/Paragraph';
+import Block from './ui/Block';
 import doPay from './tinkoff';
 
 const makePayment = () =>
@@ -40,7 +40,7 @@ export default class Payment extends React.Component {
     const isDisabled = true;
 
     return (
-      <Paragraph>
+      <Block>
         <H2>Оплата</H2>
         {!state.isDirty &&
           <button
@@ -57,7 +57,7 @@ export default class Payment extends React.Component {
         <p>
           После оплаты я пришлю тебе инвайт в закрытую группу в Телеграме.
         </p>
-      </Paragraph>
+      </Block>
     );
   }
 }
