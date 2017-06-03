@@ -47,6 +47,12 @@ const Result = styled.a`
   }
 `;
 
+const Break = styled.br`
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+`;
+
 const results = [
   { nickname: 'prostofrost', url: 'https://github.com/prostofrost/adidas-shop-react' },
   { nickname: 'correon', url: 'https://github.com/correon/adidas-shop-frontend' },
@@ -80,7 +86,7 @@ export default () => (
       ))}
     </Results>
     <p>
-      Отзывы:&nbsp;
+      Отзывы: <Break />
       <Link href="https://vk.com/wall52708366_1930">vk.com/wall52708366_1930</Link>
     </p>
   </Paragraph>

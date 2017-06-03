@@ -60,12 +60,12 @@ export default () => (
           @zhabinskiy
         </a>.
         <br />
-        <a
+        Код открыт на <a
           href="https://github.com/evgenyrodionov/kurskurskurs.erodionov.ru"
           target="_blank"
           rel="noopener noreferrer"
         >
-          github.com/evgenyrodionov/kurskurskurs.erodionov.ru
+          Гитхабе
         </a>
       </Credits>
     </Wrapper>

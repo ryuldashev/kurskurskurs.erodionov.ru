@@ -52,7 +52,7 @@ export default class Payment extends React.Component {
           </button>}
         {isDisabled &&
           <p>
-            <i>Старт продаж 5 июня в 12:00</i>
+            <i>Запись откроется 5 июня в 12:00</i>
           </p>}
         <p>
           После оплаты я пришлю тебе инвайт в закрытую группу в Телеграме.
