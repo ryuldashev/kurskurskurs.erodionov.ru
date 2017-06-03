@@ -47,25 +47,23 @@ export default () => (
     <Wrapper>
       <Legal>
         ИП Родионов Евгений Викторович<br />
-        ИНН 503621650441<br />
-        ОГРНИП 315507400016220
+        ИНН 503621650441 • ОГРНИП 315507400016220
       </Legal>
       <Credits>
-        С сайтом помогали участники первого потока курса&nbsp;
-        <a href="https://github.com/disha1010" target="_blank" rel="noopener noreferrer">
-          @disha1010
-        </a>
-        &nbsp;и&nbsp;
-        <a href="https://github.com/zhabinskiy" target="_blank" rel="noopener noreferrer">
-          @zhabinskiy
-        </a>.
-        <br />
         Код открыт на <a
           href="https://github.com/evgenyrodionov/kurskurskurs.erodionov.ru"
           target="_blank"
           rel="noopener noreferrer"
         >
           Гитхабе
+        </a>
+        <br />
+        Сайт сделали&nbsp;
+        <a href="https://github.com/disha1010" target="_blank" rel="noopener noreferrer">
+          @disha1010
+        </a>&nbsp;и&nbsp;
+        <a href="https://github.com/zhabinskiy" target="_blank" rel="noopener noreferrer">
+          @zhabinskiy
         </a>
       </Credits>
     </Wrapper>

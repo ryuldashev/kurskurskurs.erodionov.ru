@@ -41,7 +41,7 @@ export default class Payment extends React.Component {
 
     return (
       <Paragraph>
-        <H2>Стоимость</H2>
+        <H2>Оплата</H2>
         {!state.isDirty &&
           <button
             className="tinkoffPayRow tinkoffPayButton"
@@ -52,7 +52,7 @@ export default class Payment extends React.Component {
           </button>}
         {isDisabled &&
           <p>
-            <i>Запись откроется 5 июня в 12:00</i>
+            <i>Старт продаж 5 июня в 12:00</i>
           </p>}
         <p>
           После оплаты я пришлю тебе инвайт в закрытую группу в Телеграме.

@@ -8,7 +8,7 @@ import Footer from './Footer';
 
 export default () => (
   <main className="container">
-    <H1>Курс по фронтенду</H1>
+    <H1>Курс по фронтэнду</H1>
 
     <section className="content">
       <Paragraph>
