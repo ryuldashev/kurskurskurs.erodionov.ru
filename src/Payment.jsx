@@ -37,14 +37,23 @@ export default class Payment extends React.Component {
 
   render() {
     const { state } = this;
+    const isDisabled = true;
 
     return (
       <Paragraph>
         <H2>Стоимость</H2>
         {!state.isDirty &&
-          <button className="tinkoffPayRow tinkoffPayButton" onClick={makePayment}>
+          <button
+            className="tinkoffPayRow tinkoffPayButton"
+            disabled={isDisabled}
+            onClick={makePayment}
+          >
             Оплатить 10 000 руб
           </button>}
+        {isDisabled &&
+          <p>
+            <i>Старт продаж 5 июня в 12:00</i>
+          </p>}
         <p>
           После оплаты я пришлю тебе инвайт в закрытую группу в Телеграме.
         </p>

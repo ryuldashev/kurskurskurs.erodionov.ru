@@ -124,6 +124,10 @@ label {
   background: #e25882;
 }
 
+.tinkoffPayButton[disabled] {
+  background: #b1b1b1;
+}
+
 .tinkoffPayButton:active {
   position: relative;
   transform: scale(.99);
