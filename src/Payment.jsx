@@ -40,21 +40,14 @@ export default class Payment extends React.Component {
 
     return (
       <Paragraph>
-        <H2>Как оплатить?</H2>
-        <div className="paragraph-text">
-          <p>
-            Оплати банковской картой и я пришлю тебе инвайт в закрытую группу в Телеграме.
-          </p>
-          <p>
-            Стоимость для первых 40 людей: 10 000 рублей.
-          </p>
-        </div>
-        <div className="paragraph-form">
-          {!state.isDirty &&
-            <button className="tinkoffPayRow tinkoffPayButton" onClick={makePayment}>
-              Оплатить
-            </button>}
-        </div>
+        <H2>Стоимость</H2>
+        {!state.isDirty &&
+          <button className="tinkoffPayRow tinkoffPayButton" onClick={makePayment}>
+            Оплатить 10 000 руб
+          </button>}
+        <p>
+          После оплаты я пришлю тебе инвайт в закрытую группу в Телеграме.
+        </p>
       </Paragraph>
     );
   }

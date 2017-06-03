@@ -99,26 +99,6 @@ export default () => (
       </Paragraph>
       <Results />
       <Payment />
-      {/* <Paragraph>
-        <H2>Кто с нами?</H2>
-        <div className="paragraph-text">
-          <p>
-            <a href="https://rocketbank.ru/">Рокетбанк</a>
-            {' '}
-            10 мест. Офис в Москве, метро Менделеевская.
-          </p>
-          <p>
-            <a href="http://gridly.ru/">Gridly.ru</a>
-            {' '}
-            1-2 места. Удалёнка или офис в Калининграде. Работают с Авиасейлз, LG, Алиэкспрессом и
-            Додо Пиццей.
-          </p>
-          <p>
-            Хочешь успеть отхватить охуенных джуниоров в конце мая? Напиши в Телеграм:
-            <a href="https://t.me/evgenyrodionov">@evgenyrodionov</a>.
-          </p>
-        </div>
-      </Paragraph> */}
     </section>
     <Footer />
   </main>
