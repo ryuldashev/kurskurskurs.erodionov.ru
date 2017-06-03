@@ -1,12 +1,14 @@
 import React from 'react';
+import { H1, H2, H3 } from './ui/Heading';
+import Paragraph from './ui/Paragraph';
 
 export default () => (
   <main className="container">
-    <h1 className="title">Курс по фронтенду</h1>
+    <H1>Курс по фронтенду</H1>
 
     <section className="content">
-      <div className="paragraph goals">
-        <h2>Цель</h2>
+      <Paragraph>
+        <H2>Цель</H2>
         <div className="paragraph-text">
           <p>
             Сделать интернет-магазин с двумя страницами: список товаров, страница товара.
@@ -23,9 +25,9 @@ export default () => (
             </ul>
           </div>
         </div>
-      </div>
-      <div className="paragraph format">
-        <h2>Формат</h2>
+      </Paragraph>
+      <Paragraph>
+        <H2>Формат</H2>
         <div className="paragraph-text">
           <div className="description">
             <p>Курс делится на 4 этапа по неделе.</p>
@@ -43,7 +45,7 @@ export default () => (
             </p>
           </div>
           <div className="stage">
-            <h3>Первый этап: вёрстка</h3>
+            <H3>Первый этап: вёрстка</H3>
             <div className="list">
               <p>Сверстаем обе страницы. Научимся работать с:</p>
               <ul>
@@ -57,7 +59,7 @@ export default () => (
             </div>
           </div>
           <div className="stage">
-            <h3>Второй этап: Реакт</h3>
+            <H3>Второй этап: Реакт</H3>
             <p>
               Реакт это библиотека от Фейсбука для работы с интерфейсами.
             </p>
@@ -66,13 +68,13 @@ export default () => (
             </p>
           </div>
           <div className="stage">
-            <h3>Третий этап: разделяем вёрстку и данные</h3>
+            <H3>Третий этап: разделяем вёрстку и данные</H3>
             <p>
               Список товаров и информация о них должны откуда-то приходить, мы же не будем их в вёрстке хранить? Для этого мы будем запрашивать данные с сервера.
             </p>
           </div>
           <div className="stage">
-            <h3>Четвёртый этап: джаваскрипт</h3>
+            <H3>Четвёртый этап: джаваскрипт</H3>
             <div className="list">
               <p>Этот этап самый сложный — здесь мы научимся:</p>
               <ul>
@@ -85,9 +87,9 @@ export default () => (
             </div>
           </div>
         </div>
-      </div>
-      <div className="paragraph">
-        <h2>Как оплатить?</h2>
+      </Paragraph>
+      <Paragraph>
+        <H2>Как оплатить?</H2>
         <div className="paragraph-text">
           <p>
             Заполни форму, подтверди перевод и я пришлю тебе инвайт в закрытую группу в Телеграме.
@@ -121,9 +123,9 @@ export default () => (
             /> */}
           </form>
         </div>
-      </div>
-      <div className="paragraph">
-        <h2>Кто с нами?</h2>
+      </Paragraph>
+      <Paragraph>
+        <H2>Кто с нами?</H2>
         <div className="paragraph-text">
           <p>
             <a href="https://rocketbank.ru/">Рокетбанк</a>
@@ -140,16 +142,16 @@ export default () => (
             <a href="https://t.me/evgenyrodionov">@evgenyrodionov</a>.
           </p>
         </div>
-      </div>
-      <div className="paragraph">
-        <h2>Результаты курса</h2>
+      </Paragraph>
+      <Paragraph>
+        <H2>Результаты курса</H2>
         <div className="paragraph-text">
           <p>
             После курса у ребят появляется настоящее портфолио с проектом, основаным на реальных задачах. Они создают свой первый (или нет) репозиторий на Гитхабе и учатся запускать готовый проект.
           </p>
         </div>
         <div className="reuslts">
-          <h3>1-й поток</h3>
+          <H3>1-й поток</H3>
           <div className="results-item">
             <div className="results-icon">&#127913;</div>
             <a className="results-link" href="" target="_blank">@zhabinskiy</a>
@@ -175,7 +177,7 @@ export default () => (
             <a className="results-link" href="" target="_blank">@akiy</a>
           </div>
         </div>
-      </div>
+      </Paragraph>
     </section>
     <footer>
       <p>
