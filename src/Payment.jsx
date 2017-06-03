@@ -7,7 +7,7 @@ import doPay from './tinkoff';
 
 const makePayment = () =>
   doPay({
-    TerminalKey: '1495115678372DEMO',
+    TerminalKey: process.env.TINKOFF_TOKEN,
     OrderId: undefined,
     Amount: 10000 * 100,
     Language: 'ru',

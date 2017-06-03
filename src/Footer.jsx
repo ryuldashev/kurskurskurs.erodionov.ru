@@ -52,15 +52,19 @@ export default () => (
       </Legal>
       <Credits>
         С сайтом помогали участники первого потока курса&nbsp;
-        <a href="https://github.com/disha1010" target="_blank">
+        <a href="https://github.com/disha1010" target="_blank" rel="noopener noreferrer">
           @disha1010
         </a>
         &nbsp;и&nbsp;
-        <a href="https://github.com/zhabinskiy" target="_blank">
+        <a href="https://github.com/zhabinskiy" target="_blank" rel="noopener noreferrer">
           @zhabinskiy
         </a>.
         <br />
-        <a href="https://github.com/evgenyrodionov/kurskurskurs.erodionov.ru">
+        <a
+          href="https://github.com/evgenyrodionov/kurskurskurs.erodionov.ru"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           github.com/evgenyrodionov/kurskurskurs.erodionov.ru
         </a>
       </Credits>
