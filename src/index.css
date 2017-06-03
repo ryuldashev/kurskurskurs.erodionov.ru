@@ -11,25 +11,27 @@ body {
 }
 
 .container {
+  width: 100%;
   margin: 0 auto;
+}
+
+.content {
+  margin: 0 auto;
+  margin-bottom: 50px;
   padding-left: 25px;
   padding-right: 25px;
 }
 
 @media screen and (min-width: 768px) {
-  .container {
+  .content {
     width: 768px;
   }
 }
 
 @media screen and (min-width: 992px) {
-  .container {
+  .content {
     width: 768px;
   }
-}
-
-.content {
-  margin-bottom: 50px;
 }
 
 p {
@@ -171,12 +173,4 @@ label {
   box-shadow: inset 0 -5px 0px 0px #F8B1C6;
   font-family: monospace;
   text-decoration: none;
-}
-
-footer {
-  text-align: right;
-}
-
-footer p {
-  padding-bottom: 10px;
 }
