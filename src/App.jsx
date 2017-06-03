@@ -1,10 +1,13 @@
 import React from 'react';
 import { H1, H2, H3 } from './ui/Heading';
 import Paragraph from './ui/Paragraph';
+
+import Results from './Results';
+import Payment from './Payment';
 import Footer from './Footer';
 
-export default () =>
-  (<main className="container">
+export default () => (
+  <main className="container">
     <H1>Курс по фронтенду</H1>
 
     <section className="content">
@@ -94,43 +97,9 @@ export default () =>
           </div>
         </div>
       </Paragraph>
-      <Paragraph>
-        <H2>Как оплатить?</H2>
-        <div className="paragraph-text">
-          <p>
-            Заполни форму, подтверди перевод и я пришлю тебе инвайт в закрытую группу в Телеграме.
-          </p>
-          <p>
-            Стоимость для первых 40 людей: 10 000 рублей.<br />
-            Остальные: 12 500 рублей.
-          </p>
-        </div>
-        <div className="paragraph-form">
-          <form name="TinkoffPayForm">
-            <label>
-              Telegram:
-              <input className="tinkoffPayRow" type="text" name="payTelegram" />
-            </label>
-            <label>
-              GitHub:
-              <input className="tinkoffPayRow" type="text" name="payGitHub" />
-            </label>
-
-            <input className="tinkoffPayRow" type="hidden" name="payOrder" />
-            <input className="tinkoffPayRow" type="hidden" name="paySum" value="10000" />
-            {/* <input
-              className="tinkoffPayRow tinkoffPayButton"
-              type="button"
-              onClick="makePayment(document.TinkoffPayForm.paySum.value.replace(/,/ig,'.') * 100,
-                  document.TinkoffPayForm.payOrder.value,
-                  document.TinkoffPayForm.payTelegram.value,
-                  document.TinkoffPayForm.payGitHub.value)"
-              value="Оплатить"
-            /> */}
-          </form>
-        </div>
-      </Paragraph>
-      <Paragraph>
+      <Results />
+      <Payment />
+      {/* <Paragraph>
         <H2>Кто с нами?</H2>
         <div className="paragraph-text">
           <p>
@@ -149,44 +118,8 @@ export default () =>
             <a href="https://t.me/evgenyrodionov">@evgenyrodionov</a>.
           </p>
         </div>
-      </Paragraph>
-      <Paragraph>
-        <H2>Результаты курса</H2>
-        <div className="paragraph-text">
-          <p>
-            После курса у ребят появляется настоящее портфолио с проектом, основаным на реальных
-            задачах. Они создают свой первый (или нет) репозиторий на Гитхабе и учатся запускать
-            готовый проект.
-          </p>
-        </div>
-        <div className="reuslts">
-          <H3>1-й поток</H3>
-          <div className="results-item">
-            <div className="results-icon">&#127913;</div>
-            <a className="results-link" href="" target="_blank">@zhabinskiy</a>
-          </div>
-          <div className="results-item">
-            <div className="results-icon">&#127913;</div>
-            <a className="results-link" href="" target="_blank">@disha1010</a>
-          </div>
-          <div className="results-item">
-            <div className="results-icon">&#127913;</div>
-            <a className="results-link" href="" target="_blank">@akiy</a>
-          </div>
-          <div className="results-item">
-            <div className="results-icon">&#127913;</div>
-            <a className="results-link" href="" target="_blank">@znskiy</a>
-          </div>
-          <div className="results-item">
-            <div className="results-icon">&#127913;</div>
-            <a className="results-link" href="" target="_blank">@zhakiy</a>
-          </div>
-          <div className="results-item">
-            <div className="results-icon">&#127913;</div>
-            <a className="results-link" href="" target="_blank">@akiy</a>
-          </div>
-        </div>
-      </Paragraph>
+      </Paragraph> */}
     </section>
     <Footer />
-  </main>);
+  </main>
+);

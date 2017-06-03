@@ -17,50 +17,53 @@ const Wrapper = styled.div`
 
   @media screen and (min-width: 768px) {
     width: 768px;
+    display: flex;
   }
 `;
 
 const Legal = styled.p`
-  display: inline-block;
   font-size: 14px;
   opacity: .5;
-`;
 
-const Credits = styled.p`
-  display: inline-block;
-  width: 400px;
-  font-size: 14px;
-  margin-left: 50px;
-  vertical-align: top;
-
-  @media screen and (max-width: 992px) {
-    display: block;
-    width: 100%;
-    margin-left: 0;
+  @media screen and (min-width: 768px) {
+    flex-basis: 50%;
   }
 `;
 
-export default () =>
-  (<Footer>
+const Credits = styled.p`
+  margin-left: 0;
+  font-size: 14px;
+  vertical-align: top;
+
+  @media screen and (min-width: 768px) {
+    flex-basis: 50%;
+    margin-left: 50px;
+    text-align: right;
+  }
+`;
+
+export default () => (
+  <Footer>
     <Wrapper>
       <Legal>
-        ИП Родионов Евгений Викторович,<br />
-        ИНН 503621650441,<br />
-        ОГРНИП 315507400016220.
+        ИП Родионов Евгений Викторович<br />
+        ИНН 503621650441<br />
+        ОГРНИП 315507400016220
       </Legal>
       <Credits>
-        С сайтом помогали участники первого потока курса —
-        {' '}
+        С сайтом помогали участники первого потока курса&nbsp;
         <a href="https://github.com/disha1010" target="_blank">
           @disha1010
         </a>
-        {' '}
-
-        и&nbsp;
+        &nbsp;и&nbsp;
         <a href="https://github.com/zhabinskiy" target="_blank">
           @zhabinskiy
+        </a>.
+        <br />
+        <a href="https://github.com/evgenyrodionov/kurskurskurs.erodionov.ru">
+          github.com/evgenyrodionov/kurskurskurs.erodionov.ru
         </a>
-        .
       </Credits>
     </Wrapper>
-  </Footer>);
+  </Footer>
+);
