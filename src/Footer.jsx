@@ -64,7 +64,7 @@ export default () => (
         </a>&nbsp;и&nbsp;
         <a href="https://github.com/zhabinskiy" target="_blank" rel="noopener noreferrer">
           @zhabinskiy
-        </a>
+        </a>.
       </Credits>
     </Wrapper>
   </Footer>

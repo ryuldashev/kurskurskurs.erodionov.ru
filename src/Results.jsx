@@ -18,13 +18,6 @@ const Nickname = styled.span`
   transition: .2s;
 `;
 
-const Link = styled.a`
-  color: #fff;
-  border-bottom: 1px solid #FF6192;
-  box-shadow: inset 0 -5px 0px 0px #FF6192;
-  text-decoration: none;
-`;
-
 const Result = styled.a`
   padding: 10px 20px 12px 20px;
   margin-bottom: 1rem;
@@ -62,20 +55,35 @@ const results = [
   { nickname: 'hmuriy1', url: 'https://github.com/hmuriy1/adidas-shop-frontend' },
   { nickname: 'tynopet', url: 'https://github.com/tynopet/adidas-shop-frontend' },
   { nickname: 'lysycyn', url: 'https://github.com/lysycyn/adidas-shop-frontend' },
+  { nickname: 'stk-dmitry', url: 'https://github.com/stk-dmitry/adidas-shop-frontend' },
 ];
 
 const emojis = generateEmojis({ count: results.length });
 
 export default () => (
   <Block>
-    <H2>Результаты</H2>
-    <p className="paragraph-text">
-      После курса у ребят появляется настоящее портфолио с проектом, основаным на реальных
-      задачах. Они создают свой первый (или нет) репозиторий на Гитхабе и учатся запускать
-      готовый проект.
+    <H2>Результат</H2>
+    <p>
+      Научитесь делать средние веб-приложения: интернет-магазины, ЦРМ-системы, лэндинги.
+    </p>
+    <p>
+      Программисты найдут работу джуниорами от 30к/мес,
+      а руководители, маркетологи и эйчары смогут понимать что делают программисты.
+    </p>
+    <p>
+      К концу мы сделаем реакт-приложение, задеплоим его на
+      {' '}
+      <a href="https://now.sh" target="_blank" rel="noopener noreferrer">now.sh</a>
+      {' '}
+      через
+      {' '}
+      <a href="https://travis-ci.org" target="_blank" rel="noopener noreferrer">Трэвис</a>,
+      {' '}
+      и, конечно, оно будет с открытым кодом на Гитхабе.
     </p>
 
-    <H3>1-й поток</H3>
+    <H3>Как прошёл первый майский поток?</H3>
+    <p>Охуенно, вот работы ребят:</p>
     <Results>
       {results.map((result, index) => (
         <Result href={result.url} target="_blank" rel="noopener noreferrer" key={result.nickname}>
@@ -87,7 +95,9 @@ export default () => (
     </Results>
     <p>
       Отзывы: <Break />
-      <Link href="https://vk.com/wall52708366_1930">vk.com/wall52708366_1930</Link>
+      <a href="https://vk.com/wall52708366_1930" target="_blank" rel="noopener noreferrer">
+        vk.com/wall52708366_1930
+      </a>
     </p>
   </Block>
 );

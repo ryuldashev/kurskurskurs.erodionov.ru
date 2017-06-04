@@ -10,7 +10,7 @@ export const H1 = styled.h1`
   font-size: 50px;
   margin: 0px;
   text-transform: uppercase;
-  margin-bottom: 75px;
+  margin-bottom: 25px;
 `;
 
 export const H2 = styled.h2`

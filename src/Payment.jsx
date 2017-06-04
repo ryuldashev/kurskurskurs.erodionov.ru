@@ -1,9 +1,13 @@
 import React from 'react';
 import qs from 'qs';
+import distanceInWords from 'date-fns/distance_in_words';
+import ruLocale from 'date-fns/locale/ru';
 
 import { H2 } from './ui/Heading';
 import Block from './ui/Block';
 import doPay from './tinkoff';
+
+const startAt = new Date('2017 Jun 5 12:00');
 
 const makePayment = () =>
   doPay({
@@ -19,6 +23,8 @@ export default class Payment extends React.Component {
 
     this.state = {
       isDirty: false,
+      isDisabled: true,
+      now: new Date(),
     };
   }
 
@@ -33,11 +39,25 @@ export default class Payment extends React.Component {
       isDirty: Boolean(isSuccess),
       paymentId,
     });
+
+    setInterval(() => {
+      const now = new Date();
+
+      this.setState({
+        now,
+        isDisabled: startAt.getTime() > now.getTime(),
+      });
+    }, 1000);
   }
 
   render() {
     const { state } = this;
-    const isDisabled = true;
+    const isDisabled = state.isDisabled;
+    const diff = distanceInWords(state.now, startAt, {
+      locale: ruLocale,
+      addSuffix: true,
+      includeSeconds: true,
+    });
 
     return (
       <Block>
@@ -52,7 +72,7 @@ export default class Payment extends React.Component {
           </button>}
         {isDisabled &&
           <p>
-            <i>Старт продаж 5 июня в 12:00</i>
+            <i>Старт продаж 5 июня в 12:00 ({diff})</i>
           </p>}
         <p>
           После оплаты я пришлю тебе инвайт в закрытую группу в Телеграме.
