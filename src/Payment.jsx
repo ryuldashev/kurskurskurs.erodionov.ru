@@ -1,13 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 import distanceInWords from 'date-fns/distance_in_words';
+import isBefore from 'date-fns/is_before';
 import ruLocale from 'date-fns/locale/ru';
 
 import { H2 } from './ui/Heading';
 import Block from './ui/Block';
 import doPay from './tinkoff';
 
-const startAt = new Date('2017 Jun 5 12:00');
+const startAt = new Date(2017, 5, 5, 12, 0);
 
 const makePayment = () =>
   doPay({
@@ -65,10 +66,11 @@ export default class Payment extends React.Component {
   componentWillMount() {
     setInterval(() => {
       const now = new Date();
+      const isDisabled = isBefore(now, startAt);
 
       this.setState({
         now,
-        isDisabled: startAt.getTime() > now.getTime(),
+        isDisabled,
       });
     }, 1000);
   }
