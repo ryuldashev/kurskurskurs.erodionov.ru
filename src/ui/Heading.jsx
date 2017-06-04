@@ -21,8 +21,6 @@ export const H2 = styled.h2`
   line-height: 44px;
   font-size: 35px;
   margin: 0;
-  z-index: 1;
-  position: relative;
 
   @media screen and (min-width: 992px) {
     margin-bottom: -25px;

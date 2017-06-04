@@ -11,7 +11,7 @@ const startAt = new Date('2017 Jun 5 12:00');
 
 const makePayment = () =>
   doPay({
-    TerminalKey: process.env.TINKOFF_TOKEN,
+    TerminalKey: process.env.REACT_APP_TINKOFF_TOKEN,
     OrderId: undefined,
     Amount: 10000 * 100,
     Language: 'ru',
@@ -27,6 +27,7 @@ const Btn = styled.button`
   border: 0;
   cursor: pointer;
   padding: 10px 40px;
+  margin-top: 10px;
   display: inline-block;
   z-index: 0;
   position: relative;
