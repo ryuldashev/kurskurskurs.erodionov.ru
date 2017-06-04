@@ -1,5 +1,5 @@
 import React from 'react';
-import qs from 'qs';
+import styled from 'styled-components';
 import distanceInWords from 'date-fns/distance_in_words';
 import ruLocale from 'date-fns/locale/ru';
 
@@ -17,29 +17,51 @@ const makePayment = () =>
     Language: 'ru',
   });
 
+const Btn = styled.button`
+  font-family: Courier New, Courier, monospace;
+  line-height: 40px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  background: #ee5d89;
+  border: 0;
+  cursor: pointer;
+  padding: 10px 40px;
+  display: inline-block;
+  z-index: 0;
+  position: relative;
+
+  &:hover {
+    background: #e25882;
+  }
+
+  &[disabled] {
+    background: #b1b1b1;
+  }
+
+  &:active {
+    position: relative;
+    transform: scale(.99);
+  }
+`;
+
+export const PayButton = ({ isDisabled = false }) => (
+  <Btn disabled={isDisabled} onClick={makePayment}>
+    Оплатить 10 000 руб
+  </Btn>
+);
+
 export default class Payment extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      isDirty: false,
       isDisabled: true,
       now: new Date(),
     };
   }
 
   componentWillMount() {
-    const result = qs.parse(window.location.search.substr(1));
-    const { ErrorCode: code, Message: message, Success: isSuccess, PaymentId: paymentId } = result;
-
-    this.setState({
-      code,
-      message,
-      isSuccess: isSuccess === 'true', // because Tinkoff send boolean as string
-      isDirty: Boolean(isSuccess),
-      paymentId,
-    });
-
     setInterval(() => {
       const now = new Date();
 
@@ -52,7 +74,6 @@ export default class Payment extends React.Component {
 
   render() {
     const { state } = this;
-    const isDisabled = state.isDisabled;
     const diff = distanceInWords(state.now, startAt, {
       locale: ruLocale,
       addSuffix: true,
@@ -62,18 +83,12 @@ export default class Payment extends React.Component {
     return (
       <Block>
         <H2>Оплата</H2>
-        {!state.isDirty &&
-          <button
-            className="tinkoffPayRow tinkoffPayButton"
-            disabled={isDisabled}
-            onClick={makePayment}
-          >
-            Оплатить 10 000 руб
-          </button>}
-        {isDisabled &&
+        <PayButton isDisabled={state.isDisabled} />
+        {state.isDisabled &&
           <p>
             <i>Старт продаж 5 июня в 12:00 ({diff})</i>
           </p>}
+
         <p>
           После оплаты я пришлю тебе инвайт в закрытую группу в Телеграме.
         </p>

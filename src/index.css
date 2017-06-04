@@ -24,30 +24,6 @@ a:hover {
   border-bottom-color: transparent;
 }
 
-.container {
-  width: 100%;
-  margin: 0 auto;
-}
-
-.content {
-  margin: 0 auto;
-  margin-bottom: 50px;
-  padding-left: 25px;
-  padding-right: 25px;
-}
-
-@media screen and (min-width: 768px) {
-  .content {
-    width: 768px;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .content {
-    width: 768px;
-  }
-}
-
 p {
   padding-top: 0px;
   padding-left: 0px;
