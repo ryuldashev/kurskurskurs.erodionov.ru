@@ -7,10 +7,14 @@ export const H1 = styled.h1`
   font-weight: bold;
   color: #ffffff;
   line-height: 63px;
-  font-size: 50px;
+  font-size: 35px;
   margin: 0px;
   text-transform: uppercase;
   margin-bottom: 25px;
+
+  @media screen and (min-width: 375px) {
+    font-size: 50px;
+  }
 `;
 
 export const H2 = styled.h2`
