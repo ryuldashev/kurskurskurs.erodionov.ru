@@ -27,7 +27,6 @@ export const H2 = styled.h2`
   margin: 0;
 
   @media screen and (min-width: 992px) {
-    margin-bottom: -25px;
     margin-left: -50px;
   }
 `;
