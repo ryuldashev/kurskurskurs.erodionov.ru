@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import qs from 'qs';
 import styled from 'styled-components';
 
@@ -30,7 +30,7 @@ const Content = styled.section`
   }
 `;
 
-export default class extends React.Component {
+export default class extends Component {
   constructor(props) {
     super(props);
 

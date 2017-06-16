@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 import distanceInWords from 'date-fns/distance_in_words';
 import isBefore from 'date-fns/is_before';
@@ -51,13 +51,12 @@ const Btn = styled.button`
   }
 `;
 
-export const PayButton = ({ isDisabled = false }) => (
-  <Btn disabled={isDisabled} onClick={makePayment}>
+export const PayButton = ({ isDisabled = false }) =>
+  (<Btn disabled={isDisabled} onClick={makePayment}>
     Оплатить 10 000 руб
-  </Btn>
-);
+  </Btn>);
 
-export default class Payment extends React.Component {
+export default class Payment extends Component {
   constructor(props) {
     super(props);
 
