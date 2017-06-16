@@ -7,16 +7,20 @@ import ruLocale from 'date-fns/locale/ru';
 import { H2 } from './ui/Heading';
 import Block from './ui/Block';
 import doPay from './tinkoff';
+import { track } from './segment';
 
 const startAt = new Date(2017, 5, 5, 12, 0);
 
-const makePayment = () =>
+const makePayment = () => {
+  track('Checkout Started');
+
   doPay({
     TerminalKey: process.env.REACT_APP_TINKOFF_TOKEN,
     OrderId: undefined,
     Amount: 10000 * 100,
     Language: 'ru',
   });
+};
 
 const Btn = styled.button`
   font-family: Courier New, Courier, monospace;

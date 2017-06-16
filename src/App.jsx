@@ -2,6 +2,8 @@ import React from 'react';
 import qs from 'qs';
 import styled from 'styled-components';
 
+import { track } from './segment';
+
 import Header from './Header';
 import About from './About';
 import Schedule from './Schedule';
@@ -41,13 +43,18 @@ export default class extends React.Component {
     const result = qs.parse(window.location.search.substr(1));
     const { ErrorCode: code, Message: message, Success: isSuccess, PaymentId: paymentId } = result;
 
-    this.setState({
-      code,
-      message,
-      isSuccess: isSuccess === 'true', // because Tinkoff send boolean as string
-      isDirty: Boolean(isSuccess),
-      paymentId,
-    });
+    this.setState(
+      {
+        code,
+        message,
+        isSuccess: isSuccess === 'true', // because Tinkoff send boolean as string
+        isDirty: Boolean(isSuccess),
+        paymentId,
+      },
+      (nextState) => {
+        if (nextState.isSuccess) track('Order Completed');
+      },
+    );
   }
 
   render() {
