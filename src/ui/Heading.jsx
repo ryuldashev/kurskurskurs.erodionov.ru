@@ -19,7 +19,7 @@ export const H1 = styled.h1`
 
 export const H2 = styled.h2`
   font-style: normal;
-  font-family: "Philosopher";
+  font-family: monospace;
   font-weight: 700;
   color: #ffffff;
   line-height: 44px;
