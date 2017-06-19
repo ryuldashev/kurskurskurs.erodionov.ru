@@ -18,8 +18,8 @@ export const H1 = styled.h1`
 `;
 
 export const H2 = styled.h2`
-  font-style: normal;
-  font-family: monospace;
+  font-family: Helvetica;
+  font-style: italic;
   font-weight: 700;
   color: #ffffff;
   line-height: 44px;

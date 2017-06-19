@@ -42,15 +42,16 @@ const Credits = styled.p`
   }
 `;
 
-export default () => (
-  <Footer>
+export default () =>
+  (<Footer>
     <Wrapper>
       <Legal>
-        ИП Родионов Евгений Викторович<br />
+        ИП Родионов Евгений Викторович — всё серьёзно<br />
         ИНН 503621650441 • ОГРНИП 315507400016220
       </Legal>
       <Credits>
-        Код открыт на <a
+        Код открыт на{' '}
+        <a
           href="https://github.com/evgenyrodionov/kurskurskurs.erodionov.ru"
           target="_blank"
           rel="noopener noreferrer"
@@ -67,5 +68,4 @@ export default () => (
         </a>
       </Credits>
     </Wrapper>
-  </Footer>
-);
+  </Footer>);

@@ -123,4 +123,8 @@ export default () =>
         )}
       </Results>
     </Block>
+    <Block size="xs">
+      <H3>Третий поток</H3>
+      <p>Ты? У нас мало мест.</p>
+    </Block>
   </Block>);

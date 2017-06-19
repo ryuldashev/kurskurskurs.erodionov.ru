@@ -51,7 +51,9 @@ export default () =>
       <p>
         Люди на курсе и без меня всему научатся. С нами это в миллион раз быстрее.
       </p>
-      <img src="http://i.imgur.com/TsFknJu.png" alt="" style={{ width: '100%' }} />
+      <a href="https://i.imgur.com/TsFknJu.png" target="_blank" rel="noopener noreferrer">
+        <img src="https://i.imgur.com/TsFknJu.png" alt="" style={{ width: '100%' }} />
+      </a>
     </Block>
     <Block size="xs">
       <H3>В августе будет?</H3>

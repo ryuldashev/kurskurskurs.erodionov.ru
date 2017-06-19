@@ -18,7 +18,8 @@ const makePayment = () => {
 };
 
 const Btn = styled.button`
-  font-family: Courier New, Courier, monospace;
+  font-family: Helvetica;
+  font-style: italic;
   line-height: 40px;
   font-size: 20px;
   font-weight: 700;
