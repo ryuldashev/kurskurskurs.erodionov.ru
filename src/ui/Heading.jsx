@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const H1 = styled.h1`
   text-align: center;
   font-style: italic;
-  font-family: Arial;
+  font-family: Helvetica, Arial;
   font-weight: bold;
   color: #ffffff;
   line-height: 63px;
@@ -19,7 +19,7 @@ export const H1 = styled.h1`
 
 export const H2 = styled.h2`
   font-style: normal;
-  font-family: Courier New, Courier, monospace;
+  font-family: "Philosopher";
   font-weight: 700;
   color: #ffffff;
   line-height: 44px;
@@ -37,7 +37,7 @@ export const H3 = styled.h3`
   color: #0043ff;
   line-height: 30px;
   font-size: 24px;
-  margin: 0px;
+  margin: 0;
   font-weight: 400;
-  padding-bottom: 10px;
+  margin-bottom: 5px;
 `;

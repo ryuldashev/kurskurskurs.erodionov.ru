@@ -8,6 +8,7 @@ import Header from './Header';
 import About from './About';
 import Schedule from './Schedule';
 import Results from './Results';
+import Faq from './Faq';
 import Payment from './Payment';
 import Payed from './Payed';
 import Footer from './Footer';
@@ -51,8 +52,8 @@ export default class extends Component {
         isDirty: Boolean(isSuccess),
         paymentId,
       },
-      (nextState) => {
-        if (nextState.isSuccess) track('Order Completed');
+      () => {
+        if (this.state.isSuccess) track('Order Completed');
       },
     );
   }
@@ -67,6 +68,7 @@ export default class extends Component {
           <About />
           <Schedule />
           <Results />
+          <Faq />
           {!this.state.isDirty && <Payment />}
           {this.state.isDirty &&
             <Payed isSuccess={isSuccess} paymentId={paymentId} message={message} />}

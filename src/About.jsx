@@ -3,12 +3,12 @@ import React from 'react';
 import { H2 } from './ui/Heading';
 import Block from './ui/Block';
 
-export default () => (
-  <Block>
-    <H2>Цель</H2>
+export default () =>
+  (<Block>
+    <H2>Формат</H2>
     <div className="paragraph-text">
       <p>
-        Сделать сайт агентства недвижимости как
+        Мы делаем сайт агентства недвижимости как
         {' '}
         <a href="https://www.compass.com/development/" target="_blank" rel="noopener noreferrer">
           compass.com
@@ -17,7 +17,7 @@ export default () => (
         с двумя страницами: список и информация жилых комплексов.
       </p>
       <div className="list">
-        <p>На этом проекте вы научитесь:</p>
+        <p>На этом проекте люди учатся:</p>
         <ul>
           <li>верстать дизайн,</li>
           <li>запрашивать данные и хранить их,</li>
@@ -28,5 +28,4 @@ export default () => (
         </ul>
       </div>
     </div>
-  </Block>
-);
+  </Block>);

@@ -1,15 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import distanceInWords from 'date-fns/distance_in_words';
-import isBefore from 'date-fns/is_before';
-import ruLocale from 'date-fns/locale/ru';
 
 import { H2 } from './ui/Heading';
 import Block from './ui/Block';
 import doPay from './tinkoff';
 import { track } from './segment';
-
-const startAt = new Date(2017, 5, 5, 12, 0);
 
 const makePayment = () => {
   track('Checkout Started');
@@ -32,7 +27,6 @@ const Btn = styled.button`
   border: 0;
   cursor: pointer;
   padding: 10px 40px;
-  margin-top: 10px;
   display: inline-block;
   z-index: 0;
   position: relative;
@@ -56,49 +50,20 @@ export const PayButton = ({ isDisabled = false }) =>
     Оплатить 10 000 руб
   </Btn>);
 
-export default class Payment extends Component {
-  constructor(props) {
-    super(props);
+export default () =>
+  (<Block>
+    <H2>Оплата</H2>
+    <p>
+      Ещё раз: строгая программа, реальный проект с открытым красивым кодом, мой мгновенный
+      фидбэк, крутая движуха в чатах.
+    </p>
+    <p>Готов? Будет сложно и пиздато.</p>
 
-    this.state = {
-      isDisabled: true,
-      now: new Date(),
-    };
-  }
+    <Block size="xs">
+      <PayButton />
+    </Block>
 
-  componentWillMount() {
-    setInterval(() => {
-      const now = new Date();
-      const isDisabled = isBefore(now, startAt);
-
-      this.setState({
-        now,
-        isDisabled,
-      });
-    }, 1000);
-  }
-
-  render() {
-    const { state } = this;
-    const diff = distanceInWords(state.now, startAt, {
-      locale: ruLocale,
-      addSuffix: true,
-      includeSeconds: true,
-    });
-
-    return (
-      <Block>
-        <H2>Оплата</H2>
-        <PayButton isDisabled={state.isDisabled} />
-        {state.isDisabled &&
-          <p>
-            <i>Старт продаж 5 июня в 12:00 ({diff})</i>
-          </p>}
-
-        <p>
-          После оплаты я пришлю тебе инвайт в закрытую группу в Телеграме.
-        </p>
-      </Block>
-    );
-  }
-}
+    <p>
+      Я пришлю тебе инвайт в закрытую группу в Телеграме.
+    </p>
+  </Block>);
