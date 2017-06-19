@@ -38,7 +38,7 @@ const results2 = [
   { nickname: 'boldyrev-d', repo: 'boldyrev-d/yard-frontend' },
   { nickname: 'alekseevgeorgy', repo: 'alekseevgeorgy/yard-frontend' },
   { nickname: 'zh0h', repo: 'zh0h/yard-frontend' },
-  { nickname: 'ksshchk', repo: 'ksshchk/yard-frontend', isDisabled: true },
+  { nickname: 'ksshchk', repo: 'ksshchk/yard-frontend' },
   { nickname: 'MICHAspb', repo: 'MICHAspb/yard-frontend', isDisabled: true },
 ];
 
@@ -88,7 +88,7 @@ export default () =>
         В начале июня я собрал маленькую группу из 22 людей, чтобы попробовать новый формат. Мы
         делаем сайт агентства недвижимости.
       </p>
-      <p>Мы на втором этапе, туда прошло 20 людей.</p>
+      <p>Мы на втором этапе, туда прошёл 21 человек.</p>
       <ul>
         <li>
           Миша Капанага рассказывает о своих впечатлениях{' '}
