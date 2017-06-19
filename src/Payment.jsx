@@ -21,7 +21,7 @@ const Btn = styled.button`
   font-family: Helvetica;
   font-style: italic;
   line-height: 40px;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 700;
   color: #ffffff;
   background: #ee5d89;
@@ -31,6 +31,7 @@ const Btn = styled.button`
   display: inline-block;
   z-index: 0;
   position: relative;
+  width: 100%;
 
   &:hover {
     background: #e25882;
@@ -43,6 +44,11 @@ const Btn = styled.button`
   &:active {
     position: relative;
     transform: scale(.99);
+  }
+
+  @media screen and (min-width: 368px) {
+    width: auto;
+    font-size: 20px;
   }
 `;
 

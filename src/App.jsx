@@ -24,7 +24,7 @@ const Content = styled.section`
   padding-left: 25px;
   padding-right: 25px;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 992px) {
     & {
       width: 768px;
     }

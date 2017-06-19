@@ -16,8 +16,11 @@ const Wrapper = styled.div`
   padding-right: 25px;
 
   @media screen and (min-width: 768px) {
-    width: 768px;
     display: flex;
+  }
+
+  @media screen and (min-width: 992px) {
+    width: 768px;
   }
 `;
 
