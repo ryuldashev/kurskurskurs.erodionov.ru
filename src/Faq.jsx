@@ -59,7 +59,8 @@ export default () =>
       <H3>В августе будет?</H3>
       <p>
         С 31 июля. Анонс — в Телеграм-канале{' '}
-        <a href="http://t.me/rodionovrodionovrodionov">РОДИОНОВ И ФРОНТЭНД</a>.
+        <a href="http://t.me/rodionovrodionovrodionov">РОДИОНОВ И ФРОНТЭНД</a> или{' '}
+        <a href="http://vk.com/rodionovrodionovrodionov">группе ВКонтакте</a>.
       </p>
     </Block>
     <Block size="xs">
