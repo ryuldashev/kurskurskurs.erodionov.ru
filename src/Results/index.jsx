@@ -27,19 +27,19 @@ const results2 = [
   { nickname: 'kprvlv', repo: 'kprvlv/yard-frontend' },
   { nickname: 'shnider', repo: 'shnider/yard-frontend' },
   { nickname: 'akronb', repo: 'akronb/yard-frontend' },
-  { nickname: 'frontendretard', repo: 'frontendretard/yard-frontend' },
   { nickname: 'faviru', repo: 'faviru/yard-frontend' },
   { nickname: 'westfalensgod', repo: 'westfalensgod/yard-frontend' },
   { nickname: 'nikolaevigor', repo: 'nikolaevigor/yard-frontend' },
   { nickname: 'kapanaga', repo: 'kapanaga/yard-frontend' },
   { nickname: 'hik94dh', repo: 'hik94dh/yard-frontend' },
   { nickname: 'n-e-t-t-u-n-o', repo: 'n-e-t-t-u-n-o/yard-frontend' },
-  { nickname: 'Pifan91', repo: 'Pifan91/yard-frontend' },
   { nickname: 'boldyrev-d', repo: 'boldyrev-d/yard-frontend' },
   { nickname: 'alekseevgeorgy', repo: 'alekseevgeorgy/yard-frontend' },
-  { nickname: 'zh0h', repo: 'zh0h/yard-frontend' },
-  { nickname: 'ksshchk', repo: 'ksshchk/yard-frontend' },
+  // { nickname: 'zh0h', repo: 'zh0h/yard-frontend' },
+  // { nickname: 'ksshchk', repo: 'ksshchk/yard-frontend' },
   { nickname: 'MICHAspb', repo: 'MICHAspb/yard-frontend', isDisabled: true },
+  { nickname: 'frontendretard', repo: 'frontendretard/yard-frontend', isDisabled: true },
+  { nickname: 'Pifan91', repo: 'Pifan91/yard-frontend', isDisabled: true },
 ];
 
 const emojis = generateEmojis({ count: results.length });
@@ -85,10 +85,10 @@ export default () =>
     <Block size="xs">
       <H3>Второй поток</H3>
       <p>
-        В начале июня я собрал маленькую группу из 22 людей, чтобы попробовать новый формат. Мы
+        В начале июня я собрал маленькую группу из 20 людей, чтобы попробовать новый формат. Мы
         делаем сайт агентства недвижимости.
       </p>
-      <p>Мы на втором этапе, туда прошёл 21 человек.</p>
+      <p>На второй этап прошло 19 людей. На третий — 17.</p>
       <ul>
         <li>
           Миша Капанага рассказывает о своих впечатлениях от первого этапа{' '}

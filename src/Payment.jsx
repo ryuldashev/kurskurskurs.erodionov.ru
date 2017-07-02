@@ -52,8 +52,8 @@ const Btn = styled.button`
   }
 `;
 
-export const PayButton = ({ isDisabled = false }) =>
-  (<Btn disabled={isDisabled} onClick={makePayment}>
+export const PayButton = ({ disabled = false }) =>
+  (<Btn disabled={disabled} onClick={makePayment}>
     Оплатить 10 000 руб
   </Btn>);
 
@@ -67,7 +67,7 @@ export default () =>
     <p>Готов? Будет сложно и пиздато.</p>
 
     <Block size="xs">
-      <PayButton />
+      <PayButton disabled />
     </Block>
 
     <p>
