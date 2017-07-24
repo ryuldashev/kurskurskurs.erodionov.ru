@@ -13,8 +13,8 @@ body {
 
 a {
   color: #fff;
-  border-bottom: 1px solid #FF6192;
-  box-shadow: inset 0 -5px 0px 0px #FF6192;
+  border-bottom: 1px solid #ff6192;
+  box-shadow: inset 0 -5px 0px 0px #ff6192;
   text-decoration: none;
   transition: .2s;
 }
@@ -36,6 +36,10 @@ ul {
   list-style: none;
   margin: 0;
   padding-left: 0;
+}
+
+ul + p {
+  margin-top: 1.5rem;
 }
 
 ul li:before {
@@ -126,7 +130,8 @@ label {
   label {
     width: 88%;
   }
-  .tinkoffPayRow, .tinkoffPayButton {
+  .tinkoffPayRow,
+  .tinkoffPayButton {
     width: 100%;
     margin-right: 0px;
   }

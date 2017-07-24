@@ -1,14 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export const Results = styled.div`
-  margin-bottom: 2rem;
-`;
+export const Results = styled.div`margin-bottom: 2rem;`;
 
 export const Nickname = styled.span`
   color: #000;
-  border-bottom: 1px solid #F8B1C6;
-  box-shadow: inset 0 -5px 0px 0px #F8B1C6;
+  border-bottom: 1px solid #f8b1c6;
+  box-shadow: inset 0 -5px 0px 0px #f8b1c6;
   font-family: monospace;
   text-decoration: none;
   transition: .2s;
@@ -20,7 +18,7 @@ const ResultStyled = styled.a`
   margin-right: 1rem;
   background: #fff;
   border-radius: 5px;
-  box-shadow: 0px 15px 20px -10px rgba(0,0,0,0.3);
+  box-shadow: 0px 15px 20px -10px rgba(0, 0, 0, 0.3);
   transition: .2s;
   display: inline-block;
   max-width: 100%;
@@ -30,10 +28,8 @@ const ResultStyled = styled.a`
     p.isDisabled &&
     `
     opacity: .5;
-  `}
-
-  &:hover {
-    box-shadow: 0px 10px 20px -5px rgba(0,0,0,0.4);
+  `} &:hover {
+    box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, 0.4);
 
     ${Nickname} {
       box-shadow: none;
@@ -49,13 +45,13 @@ export const Result = ({ repo, emoji, isDisabled, children }) =>
     rel="noopener noreferrer"
     isDisabled={isDisabled}
   >
-    <div className="results-icon">{emoji}</div>
+    <div className="results-icon">
+      {emoji}
+    </div>
 
-    <Nickname>@{children}</Nickname>
+    <Nickname>
+      @{children}
+    </Nickname>
   </ResultStyled>);
 
-export const Break = styled.br`
-  @media screen and (min-width: 768px) {
-    display: none;
-  }
-`;
+export const Break = styled.br`@media screen and (min-width: 768px) {display: none;}`;

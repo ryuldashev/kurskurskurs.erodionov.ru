@@ -2,20 +2,33 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { H2 } from './ui/Heading';
-import Block from './ui/Block';
+import BlockInitial from './ui/Block';
 import doPay from './tinkoff';
 import { track } from './segment';
 
-const makePayment = () => {
+const makePayment = (amount) => {
   track('Checkout Started');
 
   doPay({
     TerminalKey: process.env.REACT_APP_TINKOFF_TOKEN,
     OrderId: undefined,
-    Amount: 10000 * 100,
+    Amount: amount * 100,
     Language: 'ru',
   });
 };
+
+const Row = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
+`;
+
+const Block = styled(BlockInitial)`
+`;
 
 const Btn = styled.button`
   font-family: Helvetica;
@@ -27,7 +40,7 @@ const Btn = styled.button`
   background: #ee5d89;
   border: 0;
   cursor: pointer;
-  padding: 10px 40px;
+  padding: 10px 20px;
   display: inline-block;
   z-index: 0;
   position: relative;
@@ -52,25 +65,41 @@ const Btn = styled.button`
   }
 `;
 
-export const PayButton = ({ disabled = false }) =>
-  (<Btn disabled={disabled} onClick={makePayment}>
-    Оплатить 10 000 руб
+const Subtitle = styled.p`
+  font-style: italic;
+  text-align: center;
+  margin-top: .5rem;
+`;
+
+export const PayButton = ({ disabled = false, amount }) =>
+  (<Btn disabled={disabled} onClick={() => makePayment(amount)}>
+    Оплатить {amount} руб
   </Btn>);
 
 export default () =>
   (<Block>
     <H2>Оплата</H2>
     <p>
-      Ещё раз: строгая программа, реальный проект с открытым красивым кодом, мой мгновенный
-      фидбэк, крутая движуха в чатах.
+      Ещё раз: строгая программа, реальный проект с открытым красивым кодом, мой мгновенный фидбэк,
+      крутая движуха в чатах.
     </p>
     <p>Готов? Будет сложно и пиздато.</p>
+    <p>Это последний поток для новичков, больше я не буду проводить в этом году.</p>
 
-    <Block size="xs">
-      <PayButton disabled />
-    </Block>
+    <Row>
+      <Block size="xs">
+        <PayButton amount={7500} />
+        <Subtitle>2 проверки в день</Subtitle>
+      </Block>
+      <Block size="xs">
+        <PayButton amount={10000} />
+        <Subtitle>3 проверки в день</Subtitle>
+      </Block>
+      <Block size="xs">
+        <PayButton amount={12500} />
+        <Subtitle>4 проверки в день</Subtitle>
+      </Block>
+    </Row>
 
-    <p>
-      Я пришлю тебе инвайт в закрытую группу в Телеграме.
-    </p>
+    <p>Я пришлю тебе инвайт в закрытую группу в Телеграме.</p>
   </Block>);

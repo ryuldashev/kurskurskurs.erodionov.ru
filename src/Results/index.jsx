@@ -15,9 +15,6 @@ const results = [
   { nickname: 'tynopet', repo: 'tynopet/adidas-shop-frontend' },
   { nickname: 'lysycyn', repo: 'lysycyn/adidas-shop-frontend' },
   { nickname: 'stk-dmitry', repo: 'stk-dmitry/adidas-shop-frontend' },
-];
-
-const results2 = [
   { nickname: 'sgovorukhin', repo: 'sgovorukhin/yard-frontend' },
   { nickname: 'VLanc', repo: 'VLanc/yard-frontend' },
   { nickname: 'redelvis', repo: 'redelvis/yard-frontend' },
@@ -43,52 +40,32 @@ const results2 = [
 ];
 
 const emojis = generateEmojis({ count: results.length });
-const emojis2 = generateEmojis({ count: results2.length });
 
 export default () =>
   (<Block>
     <H2>Результат</H2>
+    <p>Научитесь делать средние веб-приложения: интернет-магазины, ЦРМ-системы, лэндинги.</p>
     <p>
-      Научитесь делать средние веб-приложения: интернет-магазины, ЦРМ-системы, лэндинги.
+      Джуниоры найдут работу от 40к/мес, а руководители, маркетологи и эйчары смогут понимать что
+      делают программисты.
     </p>
     <p>
-      Джуниоры найдут работу от 30к/мес,
-      а руководители, маркетологи и эйчары смогут понимать что делают программисты.
+      <strong>Двое самых лучших джуниоров будут работать со мной.</strong>
     </p>
     <p>
-      К концу мы сделаем реакт-приложение, задеплоим его на
-      {' '}
-      <a href="https://now.sh" target="_blank" rel="noopener noreferrer">now.sh</a>
-      {' '}
-      через
-      {' '}
-      <a href="https://travis-ci.org" target="_blank" rel="noopener noreferrer">Трэвис</a>,
-      {' '}
-      и, конечно, оно будет с открытым кодом на Гитхабе.
+      К концу мы сделаем реакт-приложение, задеплоим его на{' '}
+      <a href="https://now.sh" target="_blank" rel="noopener noreferrer">
+        now.sh
+      </a>{' '}
+      через{' '}
+      <a href="https://travis-ci.org" target="_blank" rel="noopener noreferrer">
+        Трэвис
+      </a>, и, конечно, оно будет с открытым кодом на Гитхабе.
     </p>
 
     <Block size="xs">
-      <H3>Первый майский поток</H3>
-      <p>В мае мы делали магазин адидаса. Было охуенно, вот некоторые работы ребят:</p>
-      <Results>
-        {results.map(({ nickname, repo }, index) =>
-          <Result repo={repo} key={nickname} emoji={emojis[index]}>{nickname}</Result>,
-        )}
-      </Results>
-      <p>
-        И отзывы, конечно: <Break />
-        <a href="https://vk.com/wall52708366_1930" target="_blank" rel="noopener noreferrer">
-          vk.com/wall52708366_1930
-        </a>
-      </p>
-    </Block>
-    <Block size="xs">
-      <H3>Второй поток</H3>
-      <p>
-        В начале июня я собрал маленькую группу из 20 людей, чтобы попробовать новый формат. Мы
-        делаем сайт агентства недвижимости.
-      </p>
-      <p>На второй этап прошло 19 людей. На третий — 17.</p>
+      <H3>Первые 3 потока</H3>
+      <p>В мае мы делали магазин адидаса, а в июне-июле сайт агентства недвижимости.</p>
       <ul>
         <li>
           Миша Капанага рассказывает о своих впечатлениях от первого этапа{' '}
@@ -100,35 +77,35 @@ export default () =>
         </li>
         <li>
           Женя Угренинов —{' '}
-          <a href="http://www.facebook.com/negenii/posts/1021329939762960">
-            в Фейсбуке
-          </a>,
+          <a href="http://www.facebook.com/negenii/posts/1021329939762960">в Фейсбуке</a>,
         </li>
         <li>
           Стас Говорухин{' '}
-          <a href="https://www.facebook.com/unityboxy/posts/501084583557062">
-            там же
-          </a>,
+          <a href="https://www.facebook.com/unityboxy/posts/501084583557062">там же</a>,
         </li>
         <li>
           И остальные ребята:{' '}
-          <a href="https://vk.com/topic-148690438_35686099">
-            vk.com/topic-148690438_35686099
+          <a href="https://vk.com/topic-148690438_35686099">vk.com/topic-148690438_35686099</a>
+        </li>
+        <li>
+          И ещё отзывы: <Break />
+          <a href="https://vk.com/wall52708366_1930" target="_blank" rel="noopener noreferrer">
+            vk.com/wall52708366_1930
           </a>
-
         </li>
       </ul>
-      <br />
+      <p>
+        Но это всё не так важно! Главное что <strong>люди нашли работу</strong> либо{' '}
+        <strong>сменили работу</strong> либо <strong>продвинули изменения обновить стек</strong> уже
+        там где работают.
+      </p>
+      <p>Вот их проекты, которые они делали на курсе:</p>
       <Results>
-        {results2.map(({ nickname, repo, isDisabled }, index) =>
-          (<Result repo={repo} key={nickname} emoji={emojis2[index]} isDisabled={isDisabled}>
+        {results.map(({ nickname, repo }, index) =>
+          (<Result repo={repo} key={nickname} emoji={emojis[index]}>
             {nickname}
           </Result>),
         )}
       </Results>
-    </Block>
-    <Block size="xs">
-      <H3>Третий поток</H3>
-      <p>Ты? У нас мало мест.</p>
     </Block>
   </Block>);
